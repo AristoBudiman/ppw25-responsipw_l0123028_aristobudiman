@@ -11,7 +11,7 @@
                 <div class="container mt-4" style="max-width: 900px;">
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <h5 class="mb-0">Data Produk</h5>
-                        <a href="" class="btn btn-primary btn-sm">+ Tambah Produk</a>
+                        <a href="{{ route('products.create') }}" class="btn btn-primary btn-sm">+ Tambah Produk</a>
                     </div>
 
                     @if (session('success'))
