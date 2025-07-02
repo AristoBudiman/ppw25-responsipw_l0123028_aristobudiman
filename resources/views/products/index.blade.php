@@ -42,7 +42,7 @@
                                     <td>{{ $product->description ?? '-' }}</td>
                                     <td>
                                         <div class="d-flex gap-1">
-                                            <a href="" 
+                                            <a href="{{ route('products.edit', ['product'=>$product]) }}" 
                                             class="btn btn-warning btn-sm">Edit</a>
                                             <a href="" 
                                             class="btn btn-danger btn-sm">Hapus</a>
