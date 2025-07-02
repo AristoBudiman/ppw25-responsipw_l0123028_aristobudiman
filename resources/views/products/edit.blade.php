@@ -21,9 +21,14 @@
                         </div>
                     @endif
 
-                    <form method="POST" action="{{ route('products.update', ['product'=>$product]) }}" class="small">
+                    <form method="POST" action="{{ route('products.update', ['product'=>$product]) }}" class="small" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
+
+                        <div class="mb-2">
+                            <label class="font-weight-bold">Foto Produk</label>
+                            <input type="file" class="form-control @error('image') is-invalid @enderror" name="image">
+                        </div>
 
                         <div class="mb-2">
                             <label for="name" class="form-label">Nama Produk</label>

@@ -25,6 +25,7 @@
                         <thead class="table-light text-center">
                             <tr>
                                 <th style="width: 60px;">ID</th>
+                                <th>Foto</th>
                                 <th>Nama</th>
                                 <th>Jumlah</th>
                                 <th>Harga</th>
@@ -36,6 +37,11 @@
                             @forelse ($products as $product)
                                 <tr>
                                     <td class="text-center">{{ $product->id }}</td>
+                                    <td class="text-center align-middle">
+                                        <div class="d-flex justify-content-center">
+                                            <img src="{{ asset(path: 'storage/products/'.$product->image) }}" class="rounded" style="width: 50px">
+                                        </div>
+                                    </td>
                                     <td>{{ $product->name }}</td>
                                     <td class="text-center">{{ $product->quantity }}</td>
                                     <td class="text-end">Rp {{ number_format($product->price, 2, ',', '.') }}</td>
@@ -51,7 +57,7 @@
                                 </tr>
                             @empty
                                 <tr>
-                                    <td colspan="6" class="text-center">Belum ada data produk.</td>
+                                    <td colspan="7" class="text-center">Belum ada data produk.</td>
                                 </tr>
                             @endforelse
                         </tbody>

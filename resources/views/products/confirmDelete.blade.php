@@ -16,6 +16,13 @@
                         @method('DELETE')
 
                         <div class="mb-2">
+                            <label class="form-label">Foto Produk</label>
+                            <img src="{{ asset(path: 'storage/products/' . $product->image) }}" 
+                                alt="{{ $product->name }}" 
+                                class="rounded" 
+                                style="width: 50px; height: auto;">
+                        </div>
+                        <div class="mb-2">
                             <label class="form-label">Nama</label>
                             <input type="text" class="form-control form-control-sm" value="{{ $product->name }}" disabled>
                         </div>
