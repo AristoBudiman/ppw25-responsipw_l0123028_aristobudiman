@@ -44,7 +44,7 @@
                                         <div class="d-flex gap-1">
                                             <a href="{{ route('products.edit', ['product'=>$product]) }}" 
                                             class="btn btn-warning btn-sm">Edit</a>
-                                            <a href="" 
+                                            <a href="{{ route('products.confirmDelete', ['product'=>$product]) }}" 
                                             class="btn btn-danger btn-sm">Hapus</a>
                                         </div>
                                     </td>
